@@ -8,6 +8,7 @@
         @livewireStyles
     </head>
     <body class="">
+        <livewire:counter />
         @livewireScripts
     </body>
 </html>
