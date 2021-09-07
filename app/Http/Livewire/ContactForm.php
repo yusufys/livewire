@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire;
 
+use App\Mail\Email;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
 class ContactForm extends Component
@@ -15,7 +17,7 @@ class ContactForm extends Component
             'email' => 'email|required',
             'name' => 'required',
             'phone' => 'numeric|required',
-            'message' => ['required']
+            'message' => ['required', 'min:10']
     ];
     // updated hook/event
     public function updated($propertyName)
@@ -30,6 +32,8 @@ class ContactForm extends Component
     public function submitForm()
     {
         $result = $this->validate();
+        Mail::to($this->email)->send(new Email($this->email));
+
         // Contanct->create($result);
         $this->resetForm();
         session()->flash('message', 'successfully sent');
