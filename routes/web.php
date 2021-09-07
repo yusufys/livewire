@@ -11,3 +11,7 @@ Route::get('/contact-form', function () {
 Route::get('/search', function () {
     return view('search');
 });
+
+Route::get('/datatables', function () {
+    return view('datatables');
+});
