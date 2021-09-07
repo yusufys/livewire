@@ -53,6 +53,6 @@ class ContactFormTest extends TestCase
     /** @test */
     public function it_can_main_page_contains_livewire_component()
     {
-        $this->get('/')->assertStatus(200)->assertSeeLivewire('contact-form');
+        $this->get('/contact-form')->assertStatus(200)->assertSeeLivewire('contact-form');
     }
 }
