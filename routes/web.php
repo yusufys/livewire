@@ -23,3 +23,6 @@ Route::get('/posts/{id}', function ($id) {
     $post = Post::findOrFail($id);
     return view('post-details')->with('post', $post);
 })->name('posts');
+Route::get('/poll', function () {
+    return view('poll');
+});
