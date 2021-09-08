@@ -6,7 +6,7 @@ use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class Datatable extends Component
+class Datatables extends Component
 {
     use WithPagination;
     public $searchKey;

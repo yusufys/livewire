@@ -19,7 +19,7 @@
                         {{ rand(1000,100000)}}
                 </div>
                 <div class="col-12">
-                    <livewire:datatable />
+                    <livewire:datatables />
                 </div>
             </div>
         </div>
